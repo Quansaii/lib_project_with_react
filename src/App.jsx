@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HomePage } from "./GenerateHomePage";
 import { CreateBookCard } from "./BookCard";
-import { SkeletonCard } from "./SkeletonCard"; // Не забудь импортировать!
+import { SkeletonCard } from "./SkeletonCard"; 
 import "./App.css";
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
   const [startIndex, setStartIndex] = useState(0);
 
   const searchBooks = async (isNewSearch = true) => {
-    // Если поиск новый, обнуляем всё сразу, чтобы юзер видел начало процесса
     if (isNewSearch) {
       setBooks([]);
       setStartIndex(0);
